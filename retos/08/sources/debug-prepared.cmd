@@ -15,6 +15,7 @@ continue
 x/100wx $ebp-0x200
 continue
 
+x/100wx $ebp-0x200
 x/4wx $esp
 continue
 
