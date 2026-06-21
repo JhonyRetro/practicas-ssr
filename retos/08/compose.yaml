@@ -9,7 +9,7 @@ services:
     volumes:
       - ./sources:/root/sources:ro
 
-    working_dir: /root
+    working_dir: /root/sources
 
     command: sh -c
         'set -x;
