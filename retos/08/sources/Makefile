@@ -7,8 +7,8 @@ GDB := gdb
 GDB_INIT := debug-prepared.cmd
 
 SRC := stsmash.c
-TARGET := build/stack-smash
-INPUT := input.txt
+TARGET := /tmp/stsmash/stack-smash
+INPUT := /tmp/stsmash/input.txt
 
 $(TARGET): $(SRC)
 	mkdir -p $(dir $@)
