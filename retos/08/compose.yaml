@@ -1,0 +1,19 @@
+name: ssr
+
+services:
+  reto8:
+    image: debian:stable
+    restart: no
+
+    volumes:
+      - ./sources:/root/sources:ro
+
+    working_dir: /root
+
+    command: sh -c
+        'set -x;
+        apt update;
+        apt upgrade -y;
+        apt install -y build-essential gdb;
+        sleep infinity;
+        set +x'
