@@ -20,10 +20,10 @@ clean:
 run: $(TARGET)
 	./$(TARGET)
 
-debug:
+debug: $(TARGET)
 	$(GDB) -q $(TARGET)
 
-debug-prepared: generate-input
+debug-prepared: $(TARGET) generate-input
 	$(GDB) -x $(GDB_INIT) -q $(TARGET)
 
 generate-input:
