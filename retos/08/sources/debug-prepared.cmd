@@ -7,7 +7,7 @@ break *smash
 break *smash+4
 break *smash+74
 
-run
+run < /tmp/stsmash/input.txt
 
 print/x $ebp-0x200
 continue
