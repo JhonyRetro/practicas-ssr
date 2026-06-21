@@ -1,14 +1,21 @@
 set pagination off
+
 disassemble main
 disassemble smash
+
 break *smash
 break *smash+4
-break *smash+73
+break *smash+74
+
 run
-p $ebp-0x200
+
+print/x $ebp-0x200
 continue
-x/100wx smash+51
+
+x/100wx $ebp-0x200
 continue
-x/wx $esp
+
+x/4wx $esp
 continue
-exit
+
+quit
