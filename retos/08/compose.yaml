@@ -1,0 +1,18 @@
+name: ssr
+
+services:
+  retos-8:
+    image: debian:bullseye
+    platform: linux/386
+    restart: no
+
+    volumes:
+      - ./sources:/root/sources:ro
+
+    working_dir: /root/sources
+
+    command: sh -c
+        'set -x;
+        apt-get update;
+        apt-get install -y build-essential gdb;
+        sleep infinity;'
